@@ -5,13 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>node | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="node的使用 多版本安装方式： 卸载已有的node.js 下载nvm 在c盘下创建目录dev，dev里面创建两个子目录nodejs和nvm；把下载的nvm包解压到dev中的nvm包里，此时你会看到此包有一个install.cmd，右击以管理员身份运行，直接回车，生成一个文件，另存为setting.txt到当前目录，打开此文件修改里面的root：nvm的目录路径（C:\dev\nvm）和path:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node">
+<meta property="og:url" content="http://yoursite.com/2020/05/15/node/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="node的使用 多版本安装方式： 卸载已有的node.js 下载nvm 在c盘下创建目录dev，dev里面创建两个子目录nodejs和nvm；把下载的nvm包解压到dev中的nvm包里，此时你会看到此包有一个install.cmd，右击以管理员身份运行，直接回车，生成一个文件，另存为setting.txt到当前目录，打开此文件修改里面的root：nvm的目录路径（C:\dev\nvm）和path:">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-15T12:17:39.555Z">
+<meta property="article:modified_time" content="2020-05-15T12:21:20.438Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-node" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-node" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/15/node/" class="article-date">
   <time datetime="2020-05-15T12:17:39.555Z" itemprop="datePublished">2020-05-15</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/15/node/">node</a>
+    <h1 class="article-title" itemprop="name">
+      node
     </h1>
   
 
@@ -173,205 +175,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/06/test/" class="article-date">
-  <time datetime="2020-05-06T10:08:13.626Z" itemprop="datePublished">2020-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/06/test/">test</a>
-    </h1>
+    <a href="/2020/05/06/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">test</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="react的使用"><a href="#react的使用" class="headerlink" title="react的使用"></a>react的使用</h1><ul>
-<li>需要安装的包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install react</span><br><span class="line">npm install react-dom</span><br></pre></td></tr></table></figure></li>
-<li>基本使用：</li>
-<li>在js中引入包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br></pre></td></tr></table></figure></li>
-<li>使用react的createElement创建需要渲染的元素，使用createElement创建元素由三个参数，分别是：</li>
-</ul>
-<p><strong>第一个参数，表示要创建的元素类型，第二个参数表示要要创建元素的属性，第三个参数表示当前元素的子节点</strong></p>
-<ul>
-<li>react的基本使用代码(reactDOM.render将元素渲染到id为app的区域)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">var myDiv &#x3D; React.createElement(&#39;div&#39;,&#123;title:&quot;this is div&quot;,id:&quot;myDiv&quot;&#125;,&#39;这个该元素的子节点&#39;)</span><br><span class="line">ReactDOM.render(myDiv,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure></li>
-<li>由于使用react.createElement创建要渲染的元素比较麻烦，则使用jsx的语法规范</li>
-<li>使用jsx的语法规范需要安装包(语法转换工具)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-preset-react -D</span><br></pre></td></tr></table></figure></li>
-<li>需要在.babelrc中配置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;presets&quot;:[&quot;env&quot;,&quot;stage-0&quot;,&quot;react&quot;]</span><br></pre></td></tr></table></figure></li>
-<li>基本使用方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">let element_h1 &#x3D; &lt;h1&gt;Hello, JSX&lt;&#x2F;h1&gt;;</span><br><span class="line">ReactDOM.render(element_h1,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>在jsx中使用js需要用{}包起来，只要符合js代码规范都可以写</strong><br><strong>在jsx中为元素添加class，必须写className，为元素添加for时，使用htmlFor</strong><br><strong>在jsx中返回的只能由一个根元素</strong><br><strong>在jsx中写注释需要写在{/* */}中</strong></p>
-<h1 id="react中创建组件的两种方式"><a href="#react中创建组件的两种方式" class="headerlink" title="react中创建组件的两种方式"></a>react中创建组件的两种方式</h1><h2 id="第一种：使用function构造函数"><a href="#第一种：使用function构造函数" class="headerlink" title="第一种：使用function构造函数"></a>第一种：使用function构造函数</h2><p>-使用构造函数创建组件，把构造函数的名称，当作组件的名称，以html标签的形式映入到页面中即可<br><strong>组件的首字母必须要大写</strong></p>
-<ul>
-<li>基本使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">function Hello()&#123;</span><br><span class="line">    return &lt;div&gt;这是由构造函数创建的组件&lt;&#x2F;div&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">React.render(&lt;div&gt;&lt;Hello&gt;&lt;&#x2F;Hello&gt;&lt;&#x2F;div&gt;,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure></li>
-<li>构造函数创建的组件中传值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">function Hello()&#123;</span><br><span class="line">    return &lt;div&gt;这是由构造函数创建的组件---&#123;name&#125;&lt;&#x2F;div&gt;</span><br><span class="line">&#125;</span><br><span class="line">let age&#x3D;18;</span><br><span class="line">let name&#x3D;&#39;zs&#39;;</span><br><span class="line">React.render(&lt;div&gt;&lt;Hello name&#x3D;&#123;name&#125; age&#x3D;&#123;age&#125;&gt;&lt;&#x2F;Hello&gt;&lt;&#x2F;div&gt;,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure></li>
-<li>构造函数创建的组件中传递对象的全部内容</li>
-</ul>
-<p><strong>使用剩余函数传递</strong><br><strong>构造函数的参数部分需要定义props，才能使用</strong><br><strong>通过props得到的任何数据都属于只读形式，不能重新赋值</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">function Hello(props)&#123;</span><br><span class="line">    return &lt;div&gt;这是由构造函数创建的组件---&#123;props.name&#125;&lt;&#x2F;div&gt;</span><br><span class="line">&#125;</span><br><span class="line">var Person &#x3D; &#123;</span><br><span class="line">    name : &#39;zs&#39;,</span><br><span class="line">    age : 18,</span><br><span class="line">    address: &#39;北京&#39;</span><br><span class="line">&#125;</span><br><span class="line">React.render(&lt;div&gt;&lt;Hello &#123;...Person&#125;&gt;&lt;&#x2F;Hello&gt;&lt;&#x2F;div&gt;,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure>
-
-<h2 id="第二种：使用class继承React-Component来实现"><a href="#第二种：使用class继承React-Component来实现" class="headerlink" title="第二种：使用class继承React.Component来实现"></a>第二种：使用class继承React.Component来实现</h2><ul>
-<li>基本使用方式</li>
-</ul>
-<p><strong>此种方式创建的组件可以定义自己的私有数据</strong><br><strong>此种方式创建的组件需要写constructor({}),f方法体中需要调用super()</strong><br><strong>this.state中的数据是可读可写的</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">class Hello extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props)</span><br><span class="line">        this.state&#x3D;&#123;</span><br><span class="line">            data:[]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        retrun &lt;div&gt;这是由class继承React.Component的方式创建的&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">React.render(&lt;div&gt;&lt;Hello&gt;&lt;&#x2F;Hello&gt;&lt;&#x2F;div&gt;,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure>
-<p>-该方式创建的组件中传值<br><strong>在constructor中定义了props可直接使用props.xx的形式获取参数值</strong><br><strong>该方式创建的组件中可直接使用this.props.xx的形式获取参数值</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">class Hello extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props)</span><br><span class="line">        this.state&#x3D;&#123;</span><br><span class="line">            name:props.name</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render()&#123;</span><br><span class="line">        retrun &lt;div&gt;这是由class继承React.Component的方式创建的---&#123;this.props.age&#125;&lt;&#x2F;div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">React.render(&lt;div&gt;&lt;Hello name&#x3D;&#39;zs&#39; age&#x3D;18&gt;&lt;&#x2F;Hello&gt;&lt;&#x2F;div&gt;,document.getElementById(&#39;app&#39;))</span><br></pre></td></tr></table></figure>
-
-<h1 id="react的生命周期"><a href="#react的生命周期" class="headerlink" title="react的生命周期"></a>react的生命周期</h1><ul>
-<li>react的生命周期分三个阶段</li>
-<li><strong>挂载</strong> :(componentWillMount()  componentDidMount()）<ol>
-<li>先执行construcor及this.state里的初始化数据</li>
-<li>componentWillMount()组件将要开始挂载</li>
-<li>组件挂载render解析渲染</li>
-<li>componentDidMount()组件挂载完成</li>
-</ol>
-</li>
-<li><strong>渲染</strong> :(componentWillReceiveProps(nextProps,nextState)shouldComponentUpdate(nextProps,nextState) componentWillUpdate()componentDidUpdate())<ol>
-<li>shouldComponentUpdate()确定是否要更新数据</li>
-<li>当上函数返回true时进行更新</li>
-</ol>
-</li>
-<li><strong>卸载</strong> :(componentWillUnmount())<h1 id="react路由的使用"><a href="#react路由的使用" class="headerlink" title="react路由的使用"></a>react路由的使用</h1></li>
-<li>安装包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react-router-dom</span><br></pre></td></tr></table></figure></li>
-<li>导入包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123;HashRouter,Route,Link&#125; from &#39;react-router-dom&#39;</span><br></pre></td></tr></table></figure></li>
-<li>路由的基本使用</li>
-</ul>
-<p><strong>HashRouter是路由的根容器路由相关的东西，都需要包裹在其中，只是用一次</strong><br><strong>Route定义路由规则，有两个属性path/component。页充当占位符</strong><br><strong>Link表示路由的链接</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;</span><br><span class="line">import &#123;HashRouter,Route,Link&#125; from &#39;react-router-dom&#39;</span><br><span class="line">import Home from &#39;.&#x2F;components&#x2F;xxx.jsx&#39;</span><br><span class="line">import About from &#39;.&#x2F;components&#x2F;xxx.jsx&#39;</span><br><span class="line"></span><br><span class="line">export default class App extends React.Component&#123;</span><br><span class="line">    constructor(props)&#123;</span><br><span class="line">        super(props)</span><br><span class="line">        this.state&#x3D;&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;HashRouter&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;Link to&#x3D;&quot;&#x2F;home&quot;&gt;首页&lt;&#x2F;Link&gt;</span><br><span class="line">                &lt;Link to&#x3D;&quot;&#x2F;about&quot;&gt;关于&lt;&#x2F;link&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;Route path&#x3D;&quot;.&#x2F;home&quot; component&#x3D;&#123;Home&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">            &lt;Route path&#x3D;&quot;.&#x2F;about&quot; component&#x3D;&#123;About&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;HashRouter&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>默认情况下，路由的匹配规则是模糊匹配的，若使用精确匹配使用exact</li>
-<li>路由中如果使用参数，使用：修饰符，表示这个位置匹配到的是参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path&#x3D;&#39;&#x2F;movie&#x2F;:type&#x2F;:id&#39; component&#x3D;&#123;Home&#125;&gt;&lt;&#x2F;Route&gt;</span><br></pre></td></tr></table></figure></li>
-<li>组件中获取参数使用<strong>this.props.match.params.type/this.props.match.params.id</strong></li>
-</ul>
-<h1 id="react中使用ant-design组件"><a href="#react中使用ant-design组件" class="headerlink" title="react中使用ant-design组件"></a>react中使用ant-design组件</h1><ul>
-<li>安装包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install antd</span><br></pre></td></tr></table></figure></li>
-<li>导入包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123;DataPicker&#125; from &#39;antd&#39;</span><br><span class="line">import &#39;antd&#x2F;dist&#x2F;antd.css&#39;</span><br></pre></td></tr></table></figure></li>
-<li>在页面中直接使用组件，用html标签形式引入页面</li>
-</ul>
-<h1 id="按需导入ant-design组件，则不需要引入全局css样式"><a href="#按需导入ant-design组件，则不需要引入全局css样式" class="headerlink" title="按需导入ant-design组件，则不需要引入全局css样式"></a>按需导入ant-design组件，则不需要引入全局css样式</h1><p>-安装包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-plugin-import -D</span><br></pre></td></tr></table></figure>
-<ul>
-<li>导入包<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123;DataPicker&#125; from &#39;antd&#39;</span><br></pre></td></tr></table></figure></li>
-<li>在页面中直接使用组件，用html标签形式引入页面</li>
-<li>在.babelrc中配置plugin<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;plugins&quot;:[&quot;transform-runtime&quot;,[&quot;import&quot;,&#123;libraryName:&quot;antd&quot;,style:&quot;css&quot;&#125;]]</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/06/test/" data-id="cka86bbv2000340uqf7l27ngs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-git入门指南" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/06/git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" class="article-date">
-  <time datetime="2020-05-06T09:29:25.000Z" itemprop="datePublished">2020-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/06/git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">git入门指南</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>git从入门到放弃<br>lalal</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/06/git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" data-id="cka86bbsr000140uqh1krdo6u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/05/06/hello-world/" class="article-date">
-  <time datetime="2020-05-06T09:11:57.704Z" itemprop="datePublished">2020-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/06/hello-world/" data-id="cka86bbsw000240uq8977531p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
